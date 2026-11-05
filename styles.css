@@ -1,0 +1,19 @@
+:root{--bg:#081018;--card:#0f1a24;--line:#243445;--text:#eef6ff;--muted:#93a4b5;--accent:#38bdf8;--warn:#fbbf24;font-family:ui-rounded,ui-sans-serif,system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(800px 400px at 20% 0,#0ea5e933,transparent),var(--bg);color:var(--text)}
+.top{padding:1.4rem clamp(1rem,4vw,2.5rem);border-bottom:1px solid var(--line)}.brand{display:flex;gap:.8rem}.logo{font-size:1.6rem}
+h1{margin:0;font-size:1.4rem}.tag{margin:.25rem 0 0;color:var(--muted);max-width:40rem}
+main{max-width:920px;margin:0 auto;padding:1.2rem clamp(1rem,4vw,2.5rem) 3rem;display:grid;gap:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem}
+.form{display:grid;gap:.8rem} label{display:grid;gap:.3rem;font-size:.82rem;color:var(--muted)}
+input{background:#071018;border:1px solid var(--line);border-radius:10px;padding:.5rem .65rem;color:var(--text);font:inherit}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+h3{margin:.2rem 0;font-size:.95rem}.prep{display:flex;flex-wrap:wrap;gap:.4rem;min-height:1.5rem}
+.chip{background:#071018;border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;font-size:.85rem}
+.row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.btn{border:1px solid var(--line);background:#071018;color:var(--text);border-radius:10px;padding:.5rem .95rem;font-weight:650;cursor:pointer}
+.btn.primary{background:linear-gradient(135deg,#0284c7,#22d3ee);border:0;color:#042}.btn.ghost{background:transparent}.btn.danger{color:#fb7185}
+.countdown{font-size:1.6rem;font-weight:750;color:var(--accent);margin-bottom:.8rem}
+.timeline{margin:0;padding-left:1.2rem}.timeline li{margin:.45rem 0;color:var(--muted)}.timeline li strong{color:var(--text)}
+.list{display:grid;gap:.5rem;margin-top:1rem}.item{border:1px solid var(--line);border-radius:12px;padding:.7rem .85rem;background:#071018;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.leave{color:var(--warn);font-weight:700}.hint{color:var(--muted)} footer{text-align:center;color:var(--muted);font-size:.8rem;padding-bottom:2rem}
+@media(max-width:700px){.grid2,.grid3{grid-template-columns:1fr}}

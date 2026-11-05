@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leave-By Planner — Never Be Late Again</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo">⏱</span>
+      <div>
+        <h1>Leave-By Planner</h1>
+        <p class="tag">Back-calculate when to walk out the door from appointment time, travel, buffers, and prep rituals.</p>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Appointment</h2>
+      <form id="form" class="form">
+        <div class="grid2">
+          <label>Title <input id="title" required placeholder="Dentist / Flight / School pickup" /></label>
+          <label>Must arrive by <input id="arrive" type="datetime-local" required /></label>
+        </div>
+        <div class="grid3">
+          <label>Travel time (min) <input id="travel" type="number" min="0" value="25" required /></label>
+          <label>Parking / security (min) <input id="park" type="number" min="0" value="10" /></label>
+          <label>Contingency buffer (min) <input id="buffer" type="number" min="0" value="15" /></label>
+        </div>
+        <h3>Prep checklist (optional)</h3>
+        <div id="prepList" class="prep"></div>
+        <div class="row">
+          <input id="prepName" placeholder="e.g. Pack laptop" />
+          <input id="prepMin" type="number" min="1" value="5" style="width:5rem" />
+          <button type="button" id="addPrep" class="btn ghost">Add prep</button>
+        </div>
+        <div class="row">
+          <button class="btn primary" type="submit">Save & compute</button>
+          <button class="btn ghost" type="button" id="demo">Load demo day</button>
+          <button class="btn danger" type="button" id="clear">Clear all</button>
+        </div>
+      </form>
+    </section>
+    <section class="card">
+      <h2>Your leave-by timeline</h2>
+      <div id="countdown" class="countdown"></div>
+      <ol id="timeline" class="timeline"></ol>
+      <div id="list" class="list"></div>
+    </section>
+  </main>
+  <footer><p>Portfolio demo · MIT · Times stay on-device · Built with AI assistance</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
